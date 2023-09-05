@@ -1,0 +1,255 @@
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  
+    .cube {
+      width: 100px;
+      height: 100px;
+      transform-style: preserve-3d;
+      animation: spin 8s infinite linear;
+      position: fixed;
+      bottom: 100px;
+      right: 100px;
+  
+      div {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        opacity: 0.8;
+      }
+  
+      .front {
+        transform: translateZ(50px);
+        background: linear-gradient(45deg, #ff0000, #bdd846);
+      }
+  
+      .back {
+        transform: translateZ(-50px);
+        background: linear-gradient(45deg, #0095ff, #46d8d1);
+      }
+  
+      .top {
+        transform: rotateX(90deg) translateZ(50px);
+        background: linear-gradient(45deg, #ff00aa, #4657d8);
+      }
+  
+      .bottom {
+        transform: rotateX(90deg) translateZ(-50px);
+        background: linear-gradient(45deg, #00ff33, #d87446);
+      }
+  
+      .left {
+        transform: rotateY(90deg) translateZ(50px);
+        background: linear-gradient(45deg, #ffa600, #d87746);
+      }
+  
+      .right {
+        transform: rotateY(90deg) translateZ(-50px);
+        background: linear-gradient(45deg, #55ff00, #4661d8);
+      }
+    }
+  
+    .options {
+      flex-direction: column;
+  
+      .option1 {
+        position: absolute;
+        width: 60px;
+        height: 220px;
+        transform-style: preserve-3d;
+        transform: rotateX(353deg) rotateZ(358deg) rotateY(338deg) scaleX(0.7) scaleY(0.8) scaleZ(1.1);
+        bottom: 100px;
+        right: 100px;
+  
+        div {
+          position: absolute;
+          width: 60px;
+          height: 60px;
+          opacity: 0.6;
+        }
+  
+        .frontc {
+          transform: translateZ(30px);
+          background: linear-gradient(45deg, #2702bc, #59a1b5);
+          display: grid;
+          align-items: center;
+          
+          svg {
+            position: absolute;
+            margin: 1px 1px;
+            top: 50%;
+            right: 10px;
+            width: 40px;
+            left: 25px;
+            fill: rgb(19, 19, 90);
+            margin-right: px;
+            transform: translate(-50%, -50%);
+          }
+        }
+  
+        .backc {
+          transform: translateZ(-30px);
+          background: linear-gradient(45deg, #3300ff, #6dfef2);
+        }
+  
+        .topc {
+          transform: rotateX(90deg) translateZ(30px);
+          background: linear-gradient(45deg, #3300ff, #6dfef2);
+        }
+  
+        .bottomc {
+          transform: rotateX(90deg) translateZ(-30px);
+          background: linear-gradient(45deg, #3300ff, #6dfef2);
+        }
+  
+        .leftc {
+          transform: rotateY(90deg) translateZ(30px);
+          background: linear-gradient(45deg, #3300ff, #6dfef2);
+        }
+  
+        .rightc {
+          transform: rotateY(90deg) translateZ(-30px);
+          background: linear-gradient(45deg, #3300ff, #6dfef2);
+        }
+      }
+  
+      .option2 {
+        position: absolute;
+        width: 60px;
+        height: 320px;
+        transform-style: preserve-3d;
+        transform: rotateX(353deg) rotateZ(358deg) rotateY(338deg) scaleX(0.7) scaleY(0.8) scaleZ(1.1);
+        bottom: 100px;
+        right: 100px;
+  
+        div {
+          position: absolute;
+          width: 60px;
+          height: 60px;
+          opacity: 0.6;
+        }
+  
+        .front2 {
+          transform: translateZ(30px);
+          background: linear-gradient(45deg, #6f229b, #c23987d1);
+          display: grid;
+          align-items: center;
+  
+          svg {
+            position: absolute;
+            margin: 1px 1px;
+            top: 50%;
+            right: 10px;
+            width: 40px;
+            left: 25px;
+            fill: rgb(236, 236, 240);
+            margin-right: px;
+            transform: translate(-50%, -50%);
+          }
+        }
+  
+        .back2 {
+          transform: translateZ(-30px);
+          background: linear-gradient(45deg, #6f229b, #c23987d1);
+        }
+  
+        .top2 {
+          transform: rotateX(90deg) translateZ(30px);
+          background: linear-gradient(45deg, #8331b4, #c23987d1);
+        }
+  
+        .bottom2 {
+          transform: rotateX(90deg) translateZ(-30px);
+          background: linear-gradient(45deg, #011982, #492457d1);
+        }
+  
+        .left2 {
+          transform: rotateY(90deg) translateZ(30px);
+          background: linear-gradient(30deg, #011982, #492457d1);
+        }
+  
+        .right2 {
+          transform: rotateY(90deg) translateZ(-30px);
+          background: linear-gradient(35deg, #011982, #492457d1);
+        }
+      }
+  
+      .option3 {
+        position: absolute;
+        width: 60px;
+        height: 400px;
+        transform-style: preserve-3d;
+        transform: rotateX(353deg) rotateZ(358deg) rotateY(338deg) scaleX(0.7) scaleY(0.8) scaleZ(1.1);
+        bottom: 100px;
+        right: 100px;
+  
+        div {
+          position: absolute;
+          width: 60px;
+          height: 60px;
+          opacity: 0.6;
+        }
+  
+        .front3 {
+          transform: translateZ(30px);
+          background: linear-gradient(45deg, #54e7f5, #3e154dd1);
+          display: grid;
+          align-items: center;
+  
+          svg {
+            position: absolute;
+            margin: 1px 1px;
+            top: 50%;
+            right: 10px;
+            width: 40px;
+            left: 25px;
+            fill: rgba(24, 24, 106, 0.988);
+            margin-right: px;
+            transform: translate(-50%, -50%);
+          }
+        }
+  
+        .back3 {
+          transform: translateZ(-30px);
+          background: linear-gradient(45deg, #54e7f5, #3e154dd1);
+        }
+  
+        .top3 {
+          transform: rotateX(90deg) translateZ(30px);
+          background: linear-gradient(45deg, #54e7f5, #3e154dd1);
+        }
+  
+        .bottom3 {
+          transform: rotateX(90deg) translateZ(-30px);
+          background: linear-gradient(45deg, #54e7f5, #3e154dd1);
+        }
+  
+        .left3 {
+          transform: rotateY(90deg) translateZ(30px);
+          background: linear-gradient(30deg, #54e7f5, #3e154dd1);
+        }
+  
+        .right3 {
+          transform: rotateY(90deg) translateZ(-30px);
+          background: linear-gradient(35deg, #54e7f5, #3e154dd1);
+        }
+      }
+  
+      .option:hover {
+        transform: scale(1.1);
+        opacity: 0.8;
+      }
+    }
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+      transform: rotateX(360deg) rotateY(360deg);
+    }
+  }
+  
