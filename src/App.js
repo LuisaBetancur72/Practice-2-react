@@ -8,27 +8,40 @@ import Cube from './components/cubo/cubo';
 function App() {
   const [menuActive, setMenuActive] = useState(false);
 
+  const toggleMenu = () => {
+    setMenuActive(!menuActive);
+  };
+
   useEffect(() => {
     const menuButton = document.getElementById('menu-button');
+    const menuList = document.getElementById('menu-list');
 
     if (menuButton) {
-      menuButton.addEventListener('click', () => {
-        setMenuActive(!menuActive);
+      menuButton.addEventListener('click', toggleMenu);
+
+      return () => {
+        menuButton.removeEventListener('click', toggleMenu);
+      };
+    }
+
+    if (menuList) {
+      menuList.addEventListener('click', () => {
+        setMenuActive(false);
       });
 
       return () => {
-        menuButton.removeEventListener('click', () => {
-          setMenuActive(!menuActive);
+        menuList.removeEventListener('click', () => {
+          setMenuActive(false);
         });
       };
     }
-  }, [menuActive]);
+  }, []);
 
   return (
     <div className="App">
       <div className="container">
-        <div className="menu">
-          <button className={`menu-button ${menuActive ? 'active' : ''}`} id="menu-button">
+        <div className={`menu ${menuActive ? 'active' : ''}`}>
+          <button className="menu-button" id="menu-button">
             <img src={menuImg} className="menu" alt="Menu" />
           </button>
           <img src={logoImg} alt="Logo UAM" />
@@ -42,7 +55,7 @@ function App() {
           </div>
         </div>
       </div>
-      <Cube />{}
+      <Cube />
     </div>
   );
 }
